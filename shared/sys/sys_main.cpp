@@ -571,6 +571,9 @@ void *Sys_LoadSPGameDll( const char *name, GetGameAPIProc **GetGameAPI )
 #endif
 
 		const char *searchPaths[] = {
+#ifdef _DEBUG
+			cdpath,
+#endif
 			homepath,
 #ifdef MACOS_X
 			apppath,
